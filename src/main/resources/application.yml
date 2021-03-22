@@ -1,0 +1,32 @@
+        
+spring:
+  application:
+    name: spring-cloud-gw  
+  main:
+    allow-bean-definition-overriding: true
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
+      routes:
+      - id: neft-fundtransfer
+        uri: lb://neft-rtgs-ft/
+        predicates:
+        - Path=/fundtransfer/KB0081/**
+        filters:
+        - RewritePath=/fundtransfer/(?<path>.*), /$\{path}
+      - id: val-blk-benef-limit
+        uri: lb://validate-block-benef-limit/
+        predicates:
+        - Path=/limitservice/KB0036/**
+        filters:
+        - RewritePath=/limitservice/(?<path>.*), /$\{path}
+      - id: val-blk-remitter-limit
+        uri: lb://validate-block-remitter-limit/KB0038/
+        predicates:
+        - Path=/limitservice/KB0038/**
+        filters:
+        - RewritePath=/limitservice/(?<KB0038>.*), /$\{KB0038}
+        

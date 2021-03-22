@@ -1,0 +1,8 @@
+---
+applications:
+ - name: spring-cloud-gw
+   memory: 1G
+   instances: 1
+   path: target/spring-cloud-gw.jar
+   services: [ServicesDiscoveryServer]
+   random-route: true

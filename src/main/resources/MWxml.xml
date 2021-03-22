@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MWServices>
+	<MWService DON="K_TO_K_FUND_TRANSFER">
+		<reqInputClass>java.io.String</reqInputClass>
+		<reqOutputClass>com.kmbl.mw.interop.KToKFundTransferRequest</reqOutputClass>
+		<resInputClass>com.kmbl.mw.interop.KToKFundTransferResponse</resInputClass>
+		<resOutputClass>java.io.String</resOutputClass>
+	</MWService>
+	<MWService DON="FIN_FUND_TRANSFER_SERVICE">
+		<reqInputClass>java.io.String</reqInputClass>
+		<reqOutputClass>com.kmbl.mw.interop.FundTransferRequest</reqOutputClass>
+		<resInputClass>com.kmbl.mw.interop.FundTransferResponse</resInputClass>
+		<resOutputClass>java.io.String</resOutputClass>
+	</MWService>
+	<MWService DON="IMPS_P2A_FUND_TRANSFER_SERVICE">
+		<reqInputClass>java.io.String</reqInputClass>
+		<reqOutputClass>com.kmbl.mw.interop.IMPSP2ARequest</reqOutputClass>
+		<resInputClass>com.kmbl.mw.interop.IMPSFTResponse</resInputClass>
+		<resOutputClass>java.io.String</resOutputClass>
+	</MWService>
+	<MWService DON="IMPS_P2P_FUND_TRANSFER_SERVICE">
+		<reqInputClass>java.io.String</reqInputClass>
+		<reqOutputClass>com.kmbl.mw.interop.IMPSP2PRequest</reqOutputClass>
+		<resInputClass>com.kmbl.mw.interop.IMPSFTResponse</resInputClass>
+		<resOutputClass>java.io.String</resOutputClass>
+	</MWService>	
+</MWServices>
